@@ -85,58 +85,68 @@
   <body
     class="relative bg-purple-50 dark:bg-neutral-950 overflow-x-hidden select-none"
   >
-  <nav
-  id="navbar"
-  class="fixed z-50
-         bottom-4 md:top-6 md:bottom-auto
-         left-1/2 -translate-x-1/2
-         w-[92%] sm:w-[85%] md:w-[70%]
-         rounded-3xl
-         backdrop-blur-lg bg-white/20 dark:bg-black/30
-         border border-white/30 dark:border-white/10"
->
-  <ul class="flex items-center justify-around p-2 text-purple-500 tracking-widest">
-    <li>
-      <a
-        href="#hero"
-        class="nav-link flex items-center gap-2 px-3 py-2 rounded-xl transition "
+    <!-- Cursor dots -->
+    <div
+      id="cursor-dot"
+      class="hidden md:block fixed top-0 left-0 w-2 h-2 bg-purple-600 rounded-full pointer-events-none z-[9999]"
+    ></div>
+    <div
+      id="cursor-trail-1"
+      class="hidden md:block fixed top-0 left-0 w-4 h-4 bg-purple-400 rounded-full pointer-events-none z-[9998] opacity-70"
+    ></div>
+    <div
+      id="cursor-trail-2"
+      class="hidden md:block fixed top-0 left-0 w-6 h-6 bg-purple-200 rounded-full pointer-events-none z-[9997] opacity-50"
+    ></div>
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed z-50 bottom-4 md:top-6 md:bottom-auto left-1/2 -translate-x-1/2 w-[92%] sm:w-[85%] md:w-[70%] rounded-3xl backdrop-blur-lg bg-white/20 dark:bg-black/30 border border-white/30 dark:border-white/10"
+    >
+      <ul
+        class="flex items-center justify-around p-2 text-purple-500 tracking-widest"
       >
-        <i class="ri-home-4-line text-xl"></i>
-        <span class="hidden md:inline ">Home</span>
-      </a>
-    </li>
+        <li>
+          <a
+            href="#hero"
+            class="nav-link flex items-center gap-2 px-3 py-2 rounded-xl transition"
+          >
+            <i class="ri-home-4-line text-xl"></i>
+            <span class="hidden md:inline">Home</span>
+          </a>
+        </li>
 
-    <li>
-      <a
-        href="#about"
-        class="nav-link flex items-center gap-2 px-3 py-2 rounded-xl transition"
-      >
-        <i class="ri-user-3-line text-xl"></i>
-        <span class="hidden md:inline">About</span>
-      </a>
-    </li>
+        <li>
+          <a
+            href="#about"
+            class="nav-link flex items-center gap-2 px-3 py-2 rounded-xl transition"
+          >
+            <i class="ri-user-3-line text-xl"></i>
+            <span class="hidden md:inline">About</span>
+          </a>
+        </li>
 
-    <li>
-      <a
-        href="#contact"
-        class="nav-link flex items-center gap-2 px-3 py-2 rounded-xl transition"
-      >
-        <i class="ri-mail-line text-xl"></i>
-        <span class="hidden md:inline">Contact</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-
+        <li>
+          <a
+            href="#contact"
+            class="nav-link flex items-center gap-2 px-3 py-2 rounded-xl transition"
+          >
+            <i class="ri-mail-line text-xl"></i>
+            <span class="hidden md:inline">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
     <main
       class="snap-y snap-mandatory w-full font-mono text-gray-900 dark:text-gray-100 text-[clamp(0.95rem,1.2vw,1.1rem)]"
     >
       <section
-        class="hero min-h-screen w-full flex flex-col items-center justify-center" id="hero"
+        class="hero min-h-screen w-full flex flex-col items-center justify-center"
+        id="hero"
       >
         <div
-          class="hero-card bg-purple-600 dark:bg-purple-700 dark:shadow-[0_-8px_24px_rgba(168,85,247,0.25)] dark:text-gray-50 w-[90%] sm:w-[80%] md:w-[70%] h-26 sm:h-46 md:h-60 lg:h-50 xl:h-56 2xl:h-62 text-center relative flex flex-col items-center rounded-4xl mt-40 sm:mt-56"
+          class="hero-card bg-purple-600 dark:bg-purple-700 dark:shadow-[0_-8px_24px_rgba(168,85,247,0.25)] dark:text-gray-50 w-[90%] sm:w-[80%] md:w-[70%] h-26 sm:h-46 md:h-60 lg:h-50 xl:h-56 2xl:h-62 text-center relative flex flex-col items-center rounded-4xl mt-20 md:mt-56"
         >
           <h1
             class="hero-name font-bold absolute -top-30 sm:-top-46 2xl:-top-52 text-[clamp(3rem,10vw,10rem)] whitespace-nowrap leading-none text-purple-700"
@@ -241,67 +251,46 @@
         </ul>
       </section>
     </main>
-    <!-- Cursor dots -->
-    <div
-      id="cursor-dot"
-      class="fixed top-0 left-0 w-2 h-2 bg-purple-600 rounded-full pointer-events-none z-[9999]"
-    ></div>
-    <div
-      id="cursor-trail-1"
-      class="fixed top-0 left-0 w-4 h-4 bg-purple-400 rounded-full pointer-events-none z-[9998] opacity-70"
-    ></div>
-    <div
-      id="cursor-trail-2"
-      class="fixed top-0 left-0 w-6 h-6 bg-purple-200 rounded-full pointer-events-none z-[9997] opacity-50"
-    ></div>
   </body>
   <script>
-
     gsap.registerPlugin(ScrollTrigger);
 
-//Navbar
-const navLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll("section");
+    //Navbar
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section");
 
-  const activeClasses = [
-    "font-semibold",
-  ];
+    const activeClasses = ["font-semibold"];
 
-  const inactiveClasses = [
-    "text-purple-200",
-  ];
+    const inactiveClasses = ["text-purple-200"];
 
-  function setActiveLink() {
-    let current = "";
+    function setActiveLink() {
+      let current = "";
 
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 150;
-      if (scrollY >= sectionTop) {
-        current = section.getAttribute("id");
-      }
-    });
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 150;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
 
-    navLinks.forEach(link => {
-      // reset
-      link.classList.remove(...activeClasses);
-      link.classList.add(...inactiveClasses);
+      navLinks.forEach((link) => {
+        // reset
+        link.classList.remove(...activeClasses);
+        link.classList.add(...inactiveClasses);
 
-      const href = link.getAttribute("href");
+        const href = link.getAttribute("href");
 
-      if (
-        (href === "#" && current === "") ||
-        href === `#${current}`
-      ) {
-        link.classList.add(...activeClasses);
-        link.classList.remove(...inactiveClasses);
-      }
-    });
-  }
+        if ((href === "#" && current === "") || href === `#${current}`) {
+          link.classList.add(...activeClasses);
+          link.classList.remove(...inactiveClasses);
+        }
+      });
+    }
 
-  window.addEventListener("scroll", setActiveLink);
-  window.addEventListener("load", setActiveLink);
+    window.addEventListener("scroll", setActiveLink);
+    window.addEventListener("load", setActiveLink);
 
-//Coursor
+    //Coursor
     const cursorDot = document.getElementById("cursor-dot");
     const trail1 = document.getElementById("cursor-trail-1");
     const trail2 = document.getElementById("cursor-trail-2");
@@ -362,12 +351,12 @@ const navLinks = document.querySelectorAll(".nav-link");
     aboutText.innerHTML = words;
 
     // Navbar animation
-gsap.from("nav", {
-    y: -40,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out"
-  });
+    gsap.from("nav", {
+      y: -40,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    });
 
     // Animate hero-card height on scroll
     gsap.to(".hero-card", {
@@ -421,7 +410,7 @@ gsap.from("nav", {
         ease: "power1.out",
         scrollTrigger: {
           trigger: ".about",
-          start: "top 25%",
+          start: "top 35%",
           end: "top 0%",
           scrub: true,
         },

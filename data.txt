@@ -1,2 +1,0 @@
-color (dp) - #191915
-body - bg-purple-50 dark:bg-neutral-950

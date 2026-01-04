@@ -3,7 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>M.N. Sadik</title>
+    <title>M.N. Sadik - Web Designer / Developer / Photographer</title>
+    <meta
+      name="description"
+      content="Portfolio of M.N. Sadik – Web Designer, Developer, and Photographer. Showcasing projects, skills, and ways to get in touch."
+    />
+    <meta
+      name="keywords"
+      content="M.N. Sadik, web designer, developer, photographer, portfolio, frontend, backend"
+    />
+    <meta name="author" content="M.N. Sadik" />
+    <link rel="canonical" href="https://mnsadik.dev" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Apple Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="M.N. Sadik – Web Designer / Developer / Photographer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of M.N. Sadik – Web Designer, Developer, and Photographer. Showcasing projects, skills, and ways to get in touch."
+    />
+    <meta property="og:image" content="/assets/thumbnail.jpg" />
+    <meta property="og:url" content="https://mnsadik.dev" />
+    <meta property="og:site_name" content="M.N. Sadik Portfolio" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="M.N. Sadik – Web Designer / Developer / Photographer"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio of M.N. Sadik – Web Designer, Developer, and Photographer. Showcasing projects, skills, and ways to get in touch."
+    />
+    <meta name="twitter:image" content="/assets/thumbnail.jpg" />
+    <meta name="twitter:site" content="@imnsadik" />
+    <meta name="twitter:creator" content="@imnsadik" />
+
+    <!-- PWA / Theme -->
+    <meta name="theme-color" content="#440E33" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- Optional: manifest for PWA -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- JS Files -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -11,8 +72,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <style>
+      /* Hide default cursor everywhere, including links/buttons */
+      *,
+      *:hover,
+      *:focus,
+      *:active {
+        cursor: none !important;
+      }
+    </style>
   </head>
-  <body class="bg-purple-50 dark:bg-neutral-950 overflow-x-hidden">
+  <body
+    class="relative bg-purple-50 dark:bg-neutral-950 overflow-x-hidden select-none"
+  >
     <main
       class="snap-y snap-mandatory w-full font-mono text-gray-900 dark:text-gray-100 text-[clamp(0.95rem,1.2vw,1.1rem)]"
     >
@@ -23,12 +95,12 @@
           class="hero-card bg-purple-600 dark:bg-purple-700 dark:shadow-[0_-8px_24px_rgba(168,85,247,0.25)] dark:text-gray-50 w-[90%] sm:w-[80%] md:w-[70%] h-26 sm:h-46 md:h-60 lg:h-50 xl:h-56 2xl:h-62 text-center relative flex flex-col items-center rounded-4xl mt-40 sm:mt-56"
         >
           <h1
-            class="hero-name font-bold absolute -top-30 sm:-top-46 2xl:-top-52 text-[clamp(3rem,10vw,10rem)] whitespace-nowrap leading-none select-none text-purple-700"
+            class="hero-name font-bold absolute -top-30 sm:-top-46 2xl:-top-52 text-[clamp(3rem,10vw,10rem)] whitespace-nowrap leading-none text-purple-700"
           >
             <span>M.N.</span> <span>Sadik</span>
           </h1>
           <img
-            src="img/dp.png"
+            src="assets/dp.png"
             alt="Profile picture of M.N. Sadik"
             class="profile-img w-64 sm:w-90 md:w-100 lg:w-110 xl:w-120 2xl:w-130 grayscale hover:grayscale-0 drop-shadow-[-20px_-5px_15px_rgba(0,0,0,0.375)] origin-bottom transition-all duration-500 absolute bottom-0 z-10"
           />
@@ -38,7 +110,7 @@
           class="py-6 w-[90%] sm:w-[80%] md:w-[70%] flex flex-col sm:flex-row items-center justify-between gap-6 text-[clamp(0.95rem,1.2vw,1.1rem)] hero-meta"
         >
           <h6
-            class="pl-6 text-center sm:text-left text-purple-800 dark:text-purple-50"
+            class="hero-subtitle pl-6 text-center sm:text-left text-purple-800 dark:text-purple-50"
           >
             Web Designer / Developer / Photographer
           </h6>
@@ -61,7 +133,9 @@
         <div class="about-content max-w-2xl text-left p-6">
           <h1
             class="about-title text-3xl font-bold mb-6 pb-2 border-b-2 border-purple-600 dark:border-gray-50 inline-block"
-          >About Me</h1>
+          >
+            About Me
+          </h1>
 
           <p class="about-text text-lg">I’m a driven individual with the ability to adapt to any situation & proven potential to grow self & others. I’m curious by nature. I always ask a lot question & I try to do things different. I’m the type of person if you ask me a question, and I don’t know the answer, I’m gonna tell you that I don’t know. But I bet you what. I know how to find the answer, and I will find the answer.</p>
         </div>
@@ -122,9 +196,72 @@
         </ul>
       </section>
     </main>
+    <!-- Cursor dots -->
+    <div
+      id="cursor-dot"
+      class="fixed top-0 left-0 w-2 h-2 bg-purple-600 rounded-full pointer-events-none z-[9999]"
+    ></div>
+    <div
+      id="cursor-trail-1"
+      class="fixed top-0 left-0 w-4 h-4 bg-purple-400 rounded-full pointer-events-none z-[9998] opacity-70"
+    ></div>
+    <div
+      id="cursor-trail-2"
+      class="fixed top-0 left-0 w-6 h-6 bg-purple-200 rounded-full pointer-events-none z-[9997] opacity-50"
+    ></div>
   </body>
   <script>
     gsap.registerPlugin(ScrollTrigger);
+
+    const cursorDot = document.getElementById("cursor-dot");
+    const trail1 = document.getElementById("cursor-trail-1");
+    const trail2 = document.getElementById("cursor-trail-2");
+
+    let mouse = { x: 0, y: 0 };
+    let posDot = { x: 0, y: 0 };
+    let posTrail1 = { x: 0, y: 0 };
+    let posTrail2 = { x: 0, y: 0 };
+
+    document.addEventListener("mousemove", (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    gsap.ticker.add(() => {
+      // Main dot follows mouse fast
+      posDot.x += (mouse.x - posDot.x) * 1;
+      posDot.y += (mouse.y - posDot.y) * 1;
+
+      gsap.set(cursorDot, {
+        x: posDot.x,
+        y: posDot.y,
+        transformOrigin: "50% 50%",
+      });
+
+      // Trail 1 slower
+      posTrail1.x += (posDot.x - posTrail1.x) * 0.2;
+      posTrail1.y += (posDot.y - posTrail1.y) * 0.2;
+      gsap.set(trail1, { x: posTrail1.x, y: posTrail1.y });
+
+      // Trail 2 even slower
+      posTrail2.x += (posTrail1.x - posTrail2.x) * 0.15;
+      posTrail2.y += (posTrail1.y - posTrail2.y) * 0.15;
+      gsap.set(trail2, { x: posTrail2.x, y: posTrail2.y });
+    });
+
+    // Hover effect
+    const hoverElements = document.querySelectorAll(
+      "a, button, .hero-name, .hero-subtitle, .about-title, .title"
+    );
+    hoverElements.forEach((el) => {
+      el.addEventListener("mouseenter", () => {
+        gsap.to([cursorDot, trail1, trail2], { scale: 2, duration: 0.3 });
+      });
+      el.addEventListener("mouseleave", () => {
+        gsap.to([cursorDot, trail1, trail2], { scale: 1, duration: 0.3 });
+      });
+    });
+
     // Select paragraph
     const aboutText = document.querySelector(".about-text");
 
@@ -183,7 +320,7 @@
         y: 0,
         opacity: 1,
         stagger: 0.25,
-        duration:1.5,
+        duration: 1.5,
         ease: "power1.out",
         scrollTrigger: {
           trigger: ".about",
